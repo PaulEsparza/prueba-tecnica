@@ -1,0 +1,25 @@
+ <div>
+  <h1>Mis libros</h1>
+  <ul class="custom-list">
+    <li class="list-item" *ngFor="let book of books; let i = index">
+      <div class="list-item-content">
+        <img [src]="book.cover" alt="Book Cover" *ngIf="book.cover" class="item-image"/>
+        <div class="item-text">
+          <p>
+            <strong>Estatus:</strong> {{ getStatus(book.status) }} ({{book.status}}% de 100%)
+          </p>
+          <p>
+            <strong>Título:</strong> {{ book.title }}
+          </p>
+          <p>
+            <strong>Calificación:</strong> {{book.score}} ({{book.score}} de 5 estrellas)
+          </p>
+      </div>
+      </div>
+      <div class="item-buttons">
+        <button class="btn custom-button" (click)="openModal(book, i)">Editar</button>
+        <button class="btn custom-button" (click)="deleteBook(i)">Eliminar</button>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,24 @@
+<div class="modal">
+<div class="modal-content">
+  <h2 mat-dialog-title>Mis libros</h2>
+  <h2 mat-dialog-title>Título: {{title}}</h2>
+  <div class="image-container">
+    <img [src]="cover" alt="Book Cover" *ngIf="cover" />
+  </div>
+  <div class="input-container" mat-dialog-content>
+    <div class="input-field">
+      <label for="estatus">Estatus:</label>
+      <input matInput id="estatus" type="number" min="0" max="100" [(ngModel)]="estatus">
+    </div>
+    <div class="input-field">
+      <label for="calificacion">Calificación:</label>
+      <input matInput id="calificacion" type="number" min="0" max="5" [(ngModel)]="calificacion">
+    </div>
+  </div>
+  <div class="button-container" mat-dialog-actions>
+    <button class="custom-button" mat-button (click)="closeModal()">Cancelar</button>
+    <button class="custom-button" mat-button (click)="saveValues()">Guardar</button>
+  </div>
+
+</div>
+</div>

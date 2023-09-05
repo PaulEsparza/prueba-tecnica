@@ -1,0 +1,11 @@
+<div>
+  <h1>Top 5 API Books</h1>
+  <ul class="custom-list">
+    <li class="list-item" *ngFor="let book of top5ApiBooks">
+      <a [routerLink]="['/book', book.key]">
+      <img [src]="book.cover" alt="Book Cover" *ngIf="book.cover" class="list-image"/>
+      </a>
+      <span class="list-title">{{ book.title }}</span>
+    </li>
+  </ul>
+</div>

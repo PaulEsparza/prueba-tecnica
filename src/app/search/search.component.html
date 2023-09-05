@@ -1,0 +1,7 @@
+<label for="searchInput" class="search-label">Buscar libro:</label>
+<input type="text" id="searchInput" class="search-input" placeholder="Ingresa el nombre del libro" [(ngModel)]="query" (input)="onInputChange()">
+<ul class="custom-list">
+  <li class="list-item" *ngFor="let result of results">
+    <a [routerLink]="['/book', result.key]">{{ result.title }}</a>
+  </li>
+</ul>

@@ -1,0 +1,25 @@
+<div *ngIf="bookDetails">
+  <h1>Detalle libro <!-- {{bookDetails | json}} --></h1>
+  <div class="flex-container">
+  <img [src]="bookCover" alt="Book Cover" *ngIf="bookCover" class="item-image" />
+  <button class="custom-button" (click)="addBook(bookDetails, bookCover)">Agregar</button>
+</div>
+  <ul class="custom-list">
+    <li class="list-item">
+      <span class="list-title">Editorial:</span> <p class="list-description">{{ bookDetails.publishers }}</p>
+    </li>
+    <li class="list-item">
+      <span class="list-title">Título:</span> <p class="list-description">{{ bookDetails.title }}</p>
+    </li>
+    <li class="list-item">
+      <span class="list-title">ISBN:</span> <p class="list-description">{{ bookDetails.isbn_10 }}</p>
+    </li>
+    <li class="list-item">
+      <span class="list-title">Formato físico:</span> <p class="list-description">{{ bookDetails.physical_format }}</p>
+    </li>
+    <li class="list-item">
+      <span class="list-title">Fecha de publicación:</span><p class="list-description">{{ bookDetails.publish_date }}</p>
+    </li>
+  </ul>
+
+</div>
