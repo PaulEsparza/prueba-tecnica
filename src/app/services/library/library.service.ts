@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 export class LibraryService {
   private apiUrl = 'https://openlibrary.org/books/OL9155299M.json';
   private apiUrlDetail = 'https://openlibrary.org';
-  private idsBooks: string[] = ['OL9155299M', 'OL9117315M', 'OL37468678M', 'OL9199218M', 'OL32186077M'];
   private apiUrl2 = 'https://openlibrary.org/books/';
 
   constructor(private http: HttpClient) { }
