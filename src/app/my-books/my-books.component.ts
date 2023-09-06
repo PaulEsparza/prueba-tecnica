@@ -33,6 +33,7 @@ export class MyBooksComponent implements OnInit {
         this.book.book.status = data.value1;
         this.editBook(this.book.index, this.book.book);
       }
+      this.books = this.localStorageService.getBooks();
     });
     this.books.forEach((book) => {
 

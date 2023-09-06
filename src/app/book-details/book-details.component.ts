@@ -56,6 +56,7 @@ export class BookDetailsComponent implements OnInit {
     }
     data.push(object);
     this.localStorageService.saveBooks(data);
-    window.location.href = '/';
+    alert("El libro se agregó en tu lista correctamente");
+    //window.location.href = '/';
   }
 }

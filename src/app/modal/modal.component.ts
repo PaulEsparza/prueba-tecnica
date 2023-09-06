@@ -54,6 +54,6 @@ export class ModalComponent implements OnInit {
 
     this.modalService.sendData(data);
     this.dialogRef.close();
-    window.location.reload();
+    //window.location.reload();
   }
 }
