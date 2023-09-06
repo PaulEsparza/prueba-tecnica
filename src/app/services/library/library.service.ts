@@ -14,13 +14,11 @@ export class LibraryService {
   constructor(private http: HttpClient) { }
 
   getTop5ApiBooks(): Observable<any> {
-    // You may need to adjust the API endpoint based on the Open Library API documentation.
     const endpoint = `${this.apiUrl}`;
     return this.http.get(endpoint);
   }
 
   getTop5ApiBooks2(id: string): Observable<any> {
-    // You may need to adjust the API endpoint based on the Open Library API documentation.
     const endpoint = `${this.apiUrl2}${id}.json`;
     return this.http.get(endpoint);
   }
